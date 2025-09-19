@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Favorite Things</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>My Favorite Things</h1>
+    <p>Click a card to learn more!</p>
+  </header>
+
+  <main class="card-container">
+    <div id="card-book" class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>Favorite Book</h2>
+          <p>Click to reveal!</p>
+        </div>
+        <div class="card-back">
+          <h2>Dune</h2>
+          <p>A sci-fi masterpiece by Frank Herbert. A complex world of politics, ecology, and philosophy.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="card-movie" class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>Favorite Movie</h2>
+          <p>Click to reveal!</p>
+        </div>
+        <div class="card-back">
+          <h2>The Matrix</h2>
+          <p>A classic action film with groundbreaking visuals and a mind-bending story that makes you question reality.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="card-food" class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>Favorite Food</h2>
+          <p>Click to reveal!</p>
+        </div>
+        <div class="card-back">
+          <h2>Pizza</h2>
+          <p>Cheesy and perfect every time, <p>Nothing beats a classic pepperoni pizza with extra cheese. Simple, perfect, and always a treat.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bonus Modal -->
+  <div id="factModal" class="modal hidden">
+    <div class="modal-content">
+      <p id="factText"></p>
+      <button id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

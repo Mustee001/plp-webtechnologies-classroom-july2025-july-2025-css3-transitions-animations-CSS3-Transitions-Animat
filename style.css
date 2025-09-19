@@ -1,0 +1,127 @@
+/* General page styling */
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1, p {
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  gap: 30px; /* More spacing so cards are separate */
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Card base styling */
+.card {
+  width: 250px;
+  height: 350px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+
+/* Hover effect: card lifts up a bit */
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.card-flipped {
+  transform: rotateY(180deg);
+}
+
+/* Front and back styling */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Glow on hover */
+.card:hover .card-front, 
+.card:hover .card-back {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Different colors for each card */
+#card-book .card-front {
+  background-color: #3498db; /* Blue */
+  color: white;
+}
+#card-book .card-back {
+  background-color: #2ecc71; /* Green */
+  color: white;
+  transform: rotateY(180deg);
+}
+
+#card-movie .card-front {
+  background-color: #9b59b6; /* Purple */
+  color: white;
+}
+#card-movie .card-back {
+  background-color: #e67e22; /* Orange */
+  color: white;
+  transform: rotateY(180deg);
+}
+
+#card-food .card-front {
+  background-color: #e74c3c; /* Red */
+  color: white;
+}
+#card-food .card-back {
+  background-color: #f1c40f; /* Yellow */
+  color: black;
+  transform: rotateY(180deg);
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
